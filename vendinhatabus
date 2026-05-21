@@ -1,0 +1,43 @@
+tabus = [
+    {
+        "sabor" : "Morango",
+        "preco" : "2,50",
+        "quantidade" : 20
+    },
+    {
+        "sabor" : "Chocolate",
+        "preco" : "2,50",
+        "quantidade" : 12
+    },
+    {
+        "sabor" : "Céu Azul",
+        "preco" : "2,50",
+        "quantidade" : 7
+    },
+    {
+        "sabor" : "Manga",
+        "preco" : "2,50",
+        "quantidade" : 14
+    },
+    {
+        "sabor" : "Abacaxi",
+        "preco" : "2,50",
+        "quantidade" : 16
+    },
+]
+
+
+while True:
+    pergunta = input("Olá, bem vindo a minha lojinha, deseja ver o cardapio? (sim/nao): ")
+    if pergunta == "s":
+        for tabu in tabus:
+        print("Sabor:", tabu ["sabor"])
+        print("Preço:", tabu ["preco"])
+        print("Quantidade:", tabu ["quantidade"])
+        print()
+    comprar = input("Deseja comprar algum tabu? (sim/nao)"":")
+
+
+for tabu in tabus:
+    print("Sabor:", tabu ["sabor"])
+    print("Preço:", tabu ["preco"])
