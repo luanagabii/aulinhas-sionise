@@ -1,0 +1,41 @@
+copa2026 = [
+
+    {
+        "selecao" : "Brasil",
+        "tecnico" : "Carlo Ancelotti",
+        "goleiro" : "Alisson",
+        "titulos" : 5
+    },
+
+
+    {
+        "selecao" : "França",
+        "tecnico" : "Didier Deschamps",
+        "goleiro" : "Mike Maignan",
+        "titulos" : 2
+    },
+
+
+    {
+        "selecao" : "Portugal",
+        "tecnico": "Roberto Martínez",
+        "goleiro": "Diogo Costa",
+        "titulos": 0}
+]
+
+
+maior = copa2026[0]
+
+for time in copa2026:
+    print("Nome da seleção: ", time ["selecao"])
+    print("Técnico do time: ", time["tecnico"])
+    print("Goleiro Principal: ", time["goleiro"])
+    print("Quantidade de Títulos: ",time["titulos"])
+    print()
+
+
+    if time["titulos"] > maior["titulos"]:
+        maior = time
+
+
+print("a seleção com maior título é:", maior["selecao"])
