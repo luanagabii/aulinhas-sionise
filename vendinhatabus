@@ -1,3 +1,4 @@
+#codigo incompleto tod errado
 tabus = [
     {
         "sabor" : "Morango",
@@ -28,16 +29,15 @@ tabus = [
 
 
 while True:
-    pergunta = input("Olá, bem vindo a minha lojinha, deseja ver o cardapio? (sim/nao): ")
-    if pergunta == "s":
+    pergunta = input("Olá, bem vindo a minha lojinha, deseja ver o cardapio? (sim/nao): ").lower()
+    if pergunta == "sim":
         for tabu in tabus:
-        print("Sabor:", tabu ["sabor"])
-        print("Preço:", tabu ["preco"])
-        print("Quantidade:", tabu ["quantidade"])
-        print()
-    comprar = input("Deseja comprar algum tabu? (sim/nao)"":")
+            print("Sabor:", tabu ["sabor"])
+            print("Preço:", tabu ["preco"])
+            print("Quantidade:", tabu ["quantidade"])
+            print()
+            comprar = input("Deseja comprar algum tabu? (sim/nao)"":").lowe()
 
-
-for tabu in tabus:
-    print("Sabor:", tabu ["sabor"])
-    print("Preço:", tabu ["preco"])
+    else:
+        print("Ok, até a próxima.")
+        break
