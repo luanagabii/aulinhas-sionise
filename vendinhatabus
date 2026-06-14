@@ -1,4 +1,39 @@
-#codigo incompleto tod errado
+#nao terminei ainda
+
+def cardapio():
+    pergunta = input("Olá, bem vindo a minha lojinha, deseja ver o cardapio? (sim/nao): ").lower()
+    if pergunta == "sim":
+        for tabu in tabus:
+            print("Sabor:", tabu ["sabor"])
+            print("Preço:", tabu ["preco"])
+            print("Quantidade:", tabu ["quantidade"])
+            print()
+    else:
+        print("Ok, até a próxima.")
+
+def comprar():
+    pergunta = input("Deseja comprar algum tabu? (sim/nao): ").lower()
+    if pergunta == "sim":
+        sabor = input("Qual sabor deseja comprar?: ")
+        quantidade = int(input("Quantos tabus voce vai comprar?: "))
+
+    for sabor in tabus:
+        if sabor == tabus ["sabor"]:
+            if quantidade <= tabus ["quantidade"]:
+                valor = tabus ["preco"]*quantidade
+                tabus ["quantidade"] -= quantidade
+                print(f'''{quantidade} de tabus no sabor {sabor} ficaram no valor de  R${valor}''')
+            elif quantidade > tabus["quantidade"]:
+                    quant_disponivel = tabus ["quantidade"]
+                    valor2 = quant_disponivel * tabus["valor"]
+                    print(f''' Só temos {quant_disponivel} tabus, não temos mais no estoque. O valor ficou de R${valor2} ''')
+                    tabus["quantidade"] = 0
+    else:
+        print("opção invalida.")
+
+
+
+
 tabus = [
     {
         "sabor" : "Morango",
@@ -27,17 +62,3 @@ tabus = [
     },
 ]
 
-
-while True:
-    pergunta = input("Olá, bem vindo a minha lojinha, deseja ver o cardapio? (sim/nao): ").lower()
-    if pergunta == "sim":
-        for tabu in tabus:
-            print("Sabor:", tabu ["sabor"])
-            print("Preço:", tabu ["preco"])
-            print("Quantidade:", tabu ["quantidade"])
-            print()
-            comprar = input("Deseja comprar algum tabu? (sim/nao)"":").lowe()
-
-    else:
-        print("Ok, até a próxima.")
-        break
