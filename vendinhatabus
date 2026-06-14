@@ -1,64 +1,74 @@
 #nao terminei ainda
 
 def cardapio():
-    pergunta = input("Olá, bem vindo a minha lojinha, deseja ver o cardapio? (sim/nao): ").lower()
-    if pergunta == "sim":
-        for tabu in tabus:
+    for tabu in tabus:
             print("Sabor:", tabu ["sabor"])
             print("Preço:", tabu ["preco"])
             print("Quantidade:", tabu ["quantidade"])
             print()
-    else:
-        print("Ok, até a próxima.")
 
 def comprar():
-    pergunta = input("Deseja comprar algum tabu? (sim/nao): ").lower()
-    if pergunta == "sim":
-        sabor = input("Qual sabor deseja comprar?: ")
-        quantidade = int(input("Quantos tabus voce vai comprar?: "))
+    sabor = input("Qual sabor deseja comprar?: ")
+    quantidade = int(input("Quantos tabus voce vai comprar?: "))
 
-    for sabor in tabus:
-        if sabor == tabus ["sabor"]:
-            if quantidade <= tabus ["quantidade"]:
-                valor = tabus ["preco"]*quantidade
-                tabus ["quantidade"] -= quantidade
+    for tabu in tabus:
+        if sabor == tabu ["sabor"]:
+            if quantidade <= tabu ["quantidade"]:
+                valor = tabu ["preco"]* quantidade
+                tabus["quantidade"] -= quantidade
                 print(f'''{quantidade} de tabus no sabor {sabor} ficaram no valor de  R${valor}''')
-            elif quantidade > tabus["quantidade"]:
-                    quant_disponivel = tabus ["quantidade"]
-                    valor2 = quant_disponivel * tabus["valor"]
+
+            elif quantidade > tabu["quantidade"]:
+                    quant_disponivel = tabu["quantidade"]
+                    valor2 = quant_disponivel * tabu["valor"]
                     print(f''' Só temos {quant_disponivel} tabus, não temos mais no estoque. O valor ficou de R${valor2} ''')
-                    tabus["quantidade"] = 0
+                    tabu["quantidade"] = 0
     else:
-        print("opção invalida.")
+            print("opção invalida.")
+
+def sair():
+    print("Ok, até a próxima")
 
 
 
 
 tabus = [
     {
-        "sabor" : "Morango",
-        "preco" : "2,50",
+        "sabor" : "morango",
+        "preco" : 2.50,
         "quantidade" : 20
     },
     {
-        "sabor" : "Chocolate",
-        "preco" : "2,50",
+        "sabor" : "chocolate",
+        "preco" : 2.50,
         "quantidade" : 12
     },
     {
-        "sabor" : "Céu Azul",
-        "preco" : "2,50",
+        "sabor" : "cereja",
+        "preco" : 2.50,
         "quantidade" : 7
     },
     {
-        "sabor" : "Manga",
-        "preco" : "2,50",
+        "sabor" : "manga",
+        "preco" : 2.50,
         "quantidade" : 14
     },
     {
-        "sabor" : "Abacaxi",
-        "preco" : "2,50",
+        "sabor" : "abacaxi",
+        "preco" : 2.50,
         "quantidade" : 16
     },
 ]
 
+while True:
+    loja = int(input('''Olá, Bem vindo à minha lojinha, o que deseja?
+             1 - Ver o cardápio
+             2 - Escolher os tabus desejados e comprar
+             3 - Sair     :  '''))
+    if loja == 1:
+        cardapio()
+    if loja == 2:
+        comprar()
+    if loja == 3:
+         sair()
+         break
