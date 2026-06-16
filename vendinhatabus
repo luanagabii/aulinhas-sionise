@@ -1,10 +1,9 @@
-#nao terminei ainda
+#vender tabu
 
 def cardapio():
     for tabu in tabus:
             print("Sabor:", tabu ["sabor"])
             print("Preço:", tabu ["preco"])
-            print("Quantidade:", tabu ["quantidade"])
             print()
 
 def comprar():
@@ -15,16 +14,14 @@ def comprar():
         if sabor == tabu ["sabor"]:
             if quantidade <= tabu ["quantidade"]:
                 valor = tabu ["preco"]* quantidade
-                tabus["quantidade"] -= quantidade
-                print(f'''{quantidade} de tabus no sabor {sabor} ficaram no valor de  R${valor}''')
+                tabu ["quantidade"] -= quantidade
+                print(f'''{quantidade} tabu/s no sabor {sabor} ficaram no valor de  R${valor}''')
 
             elif quantidade > tabu["quantidade"]:
                     quant_disponivel = tabu["quantidade"]
-                    valor2 = quant_disponivel * tabu["valor"]
-                    print(f''' Só temos {quant_disponivel} tabus, não temos mais no estoque. O valor ficou de R${valor2} ''')
+                    valor2 = quant_disponivel * tabu ["preco"]
+                    print(f''' Só temos {quant_disponivel} tabu/s, não temos mais no estoque. O valor ficou de R${valor2} ''')
                     tabu["quantidade"] = 0
-    else:
-            print("opção invalida.")
 
 def sair():
     print("Ok, até a próxima")
@@ -69,6 +66,7 @@ while True:
         cardapio()
     if loja == 2:
         comprar()
+
     if loja == 3:
          sair()
          break
