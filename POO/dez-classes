@@ -1,0 +1,59 @@
+class Televisao:
+    def __init__(self, marca, polegadas, software):
+        self.marca = marca
+        self.polegadas = polegadas
+        self.software = software
+
+class Carro:
+    def __init__(self, marca, ano, rodas):
+        self.marca = marca
+        self.ano = ano
+        self.rodas = rodas
+
+class Filme:
+    def __init__(self, nome, produtor, duração):
+        self.nome = nome
+        self.produtor = produtor
+        self.duração = duração
+
+class Usuario:
+    def __init__(self, nome, email, cpf):
+        self.nome = nome
+        self.email = email
+        self.cpf = cpf
+
+class Bicicleta:
+    def __init__(self, cor, marca, tamanho):
+        self.cor = cor
+        self.marca = marca
+        self.tamanho = tamanho
+
+class Contabancaria:
+    def __init__(self, banco, num_conta, num_pix):
+        self.banco = banco
+        self.num_banco = num_conta
+        self.num_pix = num_pix
+
+class Livros:
+    def __init__(self, titulo, classificação_idade, gênero):
+        self.titulo = titulo
+        self.classificação_idade = classificação_idade
+        self.gênero = gênero
+
+class Tabu:
+    def __init__(self, sabor, preço, tamanho):
+        self.sabor = sabor
+        self.preço = preço
+        self.tamanho = tamanho
+
+class Jogo:
+    def __init__(self, regras, tipo, pontuação):
+        self.regras = regras
+        self.tipo = tipo
+        self.pontuação = pontuação
+
+class Pokemon:
+    def __init__(self, nome, raridade, evolução):
+        self.nome = nome
+        self.raridade = raridade
+        self.evolução = evolução
