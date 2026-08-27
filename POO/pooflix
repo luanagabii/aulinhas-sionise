@@ -23,9 +23,14 @@ class Serie:
 
 #instanciar - criar obj
 
+login = Login_usuario ("luana", "luanalgpc@gmail.com", 23317)
+login = Login_usuario ("luis", "luispretodasilva@gmail.com", 26935)
+login = Login_usuario ("alice", "licelicefofinha@gmail.com", 55422)
+
 filme1 = Filme ("It: a coisa", 2.15, "Terror", 16, "Andy Muschietti" )
 filme2 = Filme ("Bones And All", 2.10, "Terror", 18, "Luca Guadagnino" )
 filme3 = Filme ("Call Me By Your Name", 2.12, "Drama", 16, "Luca Guadagnino")
 
 serie1 = Serie("Stranger Things", "Terror Jovem", 16, 5, 42)
-serie2 = Serie("")
+serie2 = Serie("The Walking Dead", "Terror", 16, 11, 177)
+serie3 = Serie("Pretty Little Liars", "Terror Jovem,", 16, 7, 160)
