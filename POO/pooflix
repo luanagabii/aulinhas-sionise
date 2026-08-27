@@ -1,0 +1,31 @@
+class Login_usuario:
+    def __init__(self, nome, email, senha):
+        self.nome = nome
+        self.email = email
+        self.senha = senha
+
+class Filme:
+    def __init__(self, titulo, duracao, genero, classificacao, diretor):
+        self.titulo = titulo
+        self.duracao = duracao
+        self.genero = genero
+        self.classificacao = classificacao
+        self.diretor = diretor
+
+class Serie:
+    def __init__(self, titulo, genero, classificacao, temporadas, episodios):
+        self.titulo = titulo
+        self.genero = genero
+        self.classificacao = classificacao
+        self.temporada = temporadas
+        self.episodio = episodios
+
+
+#instanciar - criar obj
+
+filme1 = Filme ("It: a coisa", 2.15, "Terror", 16, "Andy Muschietti" )
+filme2 = Filme ("Bones And All", 2.10, "Terror", 18, "Luca Guadagnino" )
+filme3 = Filme ("Call Me By Your Name", 2.12, "Drama", 16, "Luca Guadagnino")
+
+serie1 = Serie("Stranger Things", "Terror Jovem", 16, 5, 42)
+serie2 = Serie("")
