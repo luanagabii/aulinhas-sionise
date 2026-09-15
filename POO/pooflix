@@ -4,6 +4,12 @@ class Login_usuario:
         self.email = email
         self.senha = senha
 
+    def exibir_dados(self):
+        print(f"Nome: {self.nome}")
+        print(f"E-mail: {self.email}")
+        print(f"Senha: {self.senha}")
+
+
 class Filme:
     def __init__(self, titulo, duracao, genero, classificacao, diretor):
         self.titulo = titulo
@@ -11,6 +17,14 @@ class Filme:
         self.genero = genero
         self.classificacao = classificacao
         self.diretor = diretor
+
+    def exibir_dados(self):
+        print(f"Título: {self.titulo}")
+        print(f"Duração: {self.duracao}")
+        print(f"Gênero: {self.genero}")
+        print(f"Classificação: {self.classificacao}")
+        print(f"Diretor: {self.diretor}")
+
 
 class Serie:
     def __init__(self, titulo, genero, classificacao, temporadas, episodios):
@@ -21,11 +35,12 @@ class Serie:
         self.episodio = episodios
 
 
+
 #instanciar - criar obj
 
-login = Login_usuario ("luana", "luanalgpc@gmail.com", 23317)
-login = Login_usuario ("luis", "luispretodasilva@gmail.com", 26935)
-login = Login_usuario ("alice", "licelicefofinha@gmail.com", 55422)
+login1 = Login_usuario ("luana", "luanalgpc@gmail.com", 23317)
+login2 = Login_usuario ("luis", "luispretodasilva@gmail.com", 26935)
+login3 = Login_usuario ("alice", "licelicefofinha@gmail.com", 55422)
 
 filme1 = Filme ("It: a coisa", 2.15, "Terror", 16, "Andy Muschietti" )
 filme2 = Filme ("Bones And All", 2.10, "Terror", 18, "Luca Guadagnino" )
@@ -34,3 +49,23 @@ filme3 = Filme ("Call Me By Your Name", 2.12, "Drama", 16, "Luca Guadagnino")
 serie1 = Serie("Stranger Things", "Terror Jovem", 16, 5, 42)
 serie2 = Serie("The Walking Dead", "Terror", 16, 11, 177)
 serie3 = Serie("Pretty Little Liars", "Terror Jovem,", 16, 7, 160)
+
+login1.exibir_dados()
+print()
+print()
+login2.exibir_dados()
+print()
+print()
+login3.exibir_dados()
+print()
+print("---------------------------------------------------------")
+print()
+filme1.exibir_dados()
+print()
+print()
+filme2.exibir_dados()
+print()
+print()
+filme3.exibir_dados()
+print()
+print("---------------------------------------------------------")
