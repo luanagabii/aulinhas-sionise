@@ -1,5 +1,5 @@
 class Aluno:
-    def __init__(self, nome, matricula, idade, sexo, cpf, rg, turma, email, tel, endereço, ):
+    def __init__(self, nome, matricula, idade, sexo, cpf, rg, turma, email, tel, endereço):
         #atributo (caracteristicas de classe/objeto)
         self.nome = nome
         self.matricula = matricula
@@ -13,7 +13,7 @@ class Aluno:
         self.endereço = endereço
 
 class Professor:
-    def __init__(self, nome, idade, sexo, cod_contrato, lattes, siep, email, tel, disciplina, formação,):
+    def __init__(self, nome, idade, sexo, cod_contrato, lattes, siep, email, tel, disciplina, formação):
         self.nome = nome
         self.idade = idade
         self.sexo = sexo
